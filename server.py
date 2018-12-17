@@ -2,6 +2,7 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
+
 @app.route('/')
 def ads_list():
     return render_template('ads_list.html', ads=[{
@@ -18,6 +19,7 @@ def ads_list():
             "premise_area": 43.0,
         }]*10
     )
+
 
 if __name__ == "__main__":
     app.run()
